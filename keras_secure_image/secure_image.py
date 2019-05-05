@@ -23,9 +23,19 @@ def transform(src_dir, dest_dir, count, block_size, image_x, image_y):
         os.makedirs(dest_dir)
 
     for filename in os.listdir(os.path.join(src_dir)):
-        if not filename.lower().endswith(('.png', '.jpg', '.jpeg')):
+        if filename.lower().endswith(('.png', '.jpg', '.jpeg')):
+            count += 1
+            full_path = os.path.join(src_dir, filename)
+            im = Image.open(full_path, "r")
+            im_resized = im.resize((image_x, image_y), Image.ANTIALIAS)
+            arr = im_resized.load()  # pixel data stored in this 2D array
+            perform_rotation(block_size, arr, image_x, image_y)
+            if count % 1000 == 0:
+                print("No of images processed " + str(count))
+            im_resized.save(os.path.join(dest_dir, filename))
+        elif os.path.isdir(filename):
             for file in os.listdir(os.path.join(src_dir, filename)):
-                if file.endswith('.jpg'):
+                if file.endswith(('.png', '.jpg', '.jpeg')):
                     full_path = os.path.join(src_dir, filename, file)
                     if not os.path.exists(os.path.join(dest_dir, filename)):
                         os.mkdir(os.path.join(dest_dir, filename))
@@ -36,18 +46,8 @@ def transform(src_dir, dest_dir, count, block_size, image_x, image_y):
             if count % 1000 == 0:
                 print("No of images processed " + str(count))
             im_resized.save(os.path.join(dest_dir, filename, file))
-        elif filename.lower().endswith(('.png', '.jpg', '.jpeg')):
-            count += 1
-            full_path = os.path.join(src_dir, filename)
-            im = Image.open(full_path, "r")
-            im_resized = im.resize((image_x, image_y), Image.ANTIALIAS)
-            arr = im_resized.load()  # pixel data stored in this 2D array
-            perform_rotation(block_size, arr, image_x, image_y)
-            if count % 1000 == 0:
-                print("No of images processed " + str(count))
-            im_resized.save(os.path.join(dest_dir, filename))
         else:
-            print("Unknown file type")
+            print("Unknown file type: "+filename)
 
 
 def perform_rotation(block_size, arr, image_x, image_y):
