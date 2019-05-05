@@ -15,14 +15,14 @@ You can write your own generator and call the decrypt functionality at runtime. 
 
 #### Encrypting the images
 
-`from keras_secure_image import encrypt_directory
+```from keras_secure_image import encrypt_directory
 encrypt_directory(src_dir="/path/to/src",
                                    dest_dir="/path/to/dest", image_x=100, image_y=100,
-                                   password="<PASSWORD>")`
+                                   password="<PASSWORD>")```
 								  
 #### Training on encrypted images
 
-`
+```
 def generator_from_encrypted_data(path_to_features, labels, batch_size):
 
  # Create empty arrays to contain batch of path to features and labels#
@@ -38,11 +38,11 @@ def generator_from_encrypted_data(path_to_features, labels, batch_size):
      batch_features[i] = img
      batch_labels[i] = labels[index]
    yield batch_features, batch_labels
-   `
+   ```
 
 Calling the fit_generator in Keras
 
-`model.fit_generator(generator_from_encrypted_data(path_to_features,labels, 32),
+```model.fit_generator(generator_from_encrypted_data(path_to_features,labels, 32),
                     samples_per_epoch=20, nb_epoch=10,
                     validation_data=generator_from_encrypted_data(features,labels, 16),
-                    validation_steps=5, callbacks=callbacks_list, shuffle=True,use_multiprocessing=True)`   
+                    validation_steps=5, callbacks=callbacks_list, shuffle=True,use_multiprocessing=True)```  
