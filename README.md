@@ -40,7 +40,7 @@ def generator_from_encrypted_data(path_to_features, labels, batch_size):
 ```
 
 ***Note*** : Check the line
-```ruby
+```python
 img = decrypt_data(path_to_img=path_to_features[index], password="<PASSWORD>", image_x=100, image_y=100)
 ```
 This `decrypt_data` function takes the path to the image and decrypts it.
