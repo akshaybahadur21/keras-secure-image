@@ -39,11 +39,13 @@ def generator_from_encrypted_data(path_to_features, labels, batch_size):
      batch_features[i] = img
      batch_labels[i] = labels[index]
    yield batch_features, batch_labels
-   ```
+   
+```
 
 Calling the fit_generator in Keras
 
 ```model.fit_generator(generator_from_encrypted_data(path_to_features,labels, 32),
                     samples_per_epoch=20, nb_epoch=10,
                     validation_data=generator_from_encrypted_data(features,labels, 16),
-                    validation_steps=5, callbacks=callbacks_list, shuffle=True,use_multiprocessing=True)```  
+                    validation_steps=5, callbacks=callbacks_list, shuffle=True,use_multiprocessing=True)
+```  
