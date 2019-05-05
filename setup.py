@@ -9,7 +9,7 @@ The model is trained on the encrypted data
 setup(
   name = 'keras_secure_image',         
   packages = ['keras_secure_image'],   
-  version = '0.1',      
+  version = '0.2',      
   license='MIT',       
   long_description = long_description,   
   author = 'Akshay Bahadur',                   
@@ -19,8 +19,8 @@ setup(
   keywords = ['KERAS', 'SECURITY', 'DEEP LEARNING'],   
   install_requires=[            
           'numpy',
-          'PIL',
-		  'skimage'
+          'Pillow',
+		  'scikit-image'
       ],
   classifiers=[
     'Development Status :: 3 - Alpha',      	
