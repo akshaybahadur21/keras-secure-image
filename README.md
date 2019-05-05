@@ -32,12 +32,19 @@ def generator_from_encrypted_data(path_to_features, labels, batch_size):
    for i in range(batch_size):
      # choose random index in path_to_features
      index= random.choice(len(path_to_features),1)
-	 img = decrypt_data(path_to_img=path_to_features[index], password="<PASSWORD>", image_x=100, image_y=100)
+     img = decrypt_data(path_to_img=path_to_features[index], password="<PASSWORD>", image_x=100, image_y=100)
      batch_features[i] = img
      batch_labels[i] = labels[index]
    yield batch_features, batch_labels
    
 ```
+
+***Note*** : Check the line
+```ruby
+img = decrypt_data(path_to_img=path_to_features[index], password="<PASSWORD>", image_x=100, image_y=100)
+```
+This `decrypt_data` function takes the path to the image and decrypts it.
+Make sure that the `<PASSWORD>` is the same for encryption.
 
 Calling the fit_generator in Keras
 
