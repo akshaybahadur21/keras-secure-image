@@ -8,14 +8,13 @@ The model is trained on the encrypted data
 
 setup(
   name = 'keras-secure-image',         
-  packages = ['keras_secure_image'],   
-  version = '0.2',      
+  version = '0.3',      
   license='MIT',       
   long_description = long_description,   
   author = 'Akshay Bahadur',                   
   author_email = 'akshaybahadur21@gmail.com',      
   url = 'https://github.com/akshaybahadur21',   
-  download_url = 'https://github.com/akshaybahadur21/keras-secure-image/archive/v0.2.tar.gz',
+  download_url = 'https://github.com/akshaybahadur21/keras-secure-image/archive/v0.3.tar.gz',
   keywords = ['KERAS', 'SECURITY', 'DEEP LEARNING'],   
   install_requires=[            
           'numpy',
