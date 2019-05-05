@@ -18,8 +18,9 @@ You can write your own generator and call the decrypt functionality at runtime. 
 ```from keras_secure_image import encrypt_directory
 encrypt_directory(src_dir="/path/to/src",
                                    dest_dir="/path/to/dest", image_x=100, image_y=100,
-                                   password="<PASSWORD>")```
-								  
+                                   password="<PASSWORD>)
+												  
+```
 #### Training on encrypted images
 
 ```
