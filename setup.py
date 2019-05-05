@@ -8,7 +8,7 @@ The model is trained on the encrypted data
 
 setup(
   name = 'keras-secure-image',         
-  version = '0.3',      
+  version = '0.3.1',      
   license='MIT',       
   long_description = long_description,   
   author = 'Akshay Bahadur',                   
