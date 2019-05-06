@@ -22,6 +22,14 @@ encrypt_directory(src_dir="/path/to/src",
                                    password="<PASSWORD>)
 												  
 ```
+
+##### Original Image
+<img src="https://github.com/akshaybahadur21/keras-secure-image/blob/master/images/img_normal.jpg">
+
+##### Encrypted Image
+<img src="https://github.com/akshaybahadur21/keras-secure-image/blob/master/images/img_enc.jpg">
+
+
 #### Training on encrypted images
 
 ```python
