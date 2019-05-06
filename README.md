@@ -25,6 +25,7 @@ encrypt_directory(src_dir="/path/to/src",
 #### Training on encrypted images
 
 ```python
+from keras_secure_image import decrypt_img
 def generator_from_encrypted_data(path_to_features, labels, batch_size):
  batch_features = np.zeros((batch_size, 64, 64, 3))
  batch_labels = np.zeros((batch_size,1))
@@ -32,7 +33,7 @@ def generator_from_encrypted_data(path_to_features, labels, batch_size):
    for i in range(batch_size):
      # choose random index in path_to_features
      index= random.choice(len(path_to_features),1)
-     img = decrypt_data(path_to_img=path_to_features[index], password="<PASSWORD>", image_x=100, image_y=100)
+     img = decrypt_img(path_to_img=path_to_features[index], password="<PASSWORD>", image_x=100, image_y=100)
      batch_features[i] = img
      batch_labels[i] = labels[index]
    yield batch_features, batch_labels
