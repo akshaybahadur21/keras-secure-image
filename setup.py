@@ -2,8 +2,16 @@ from distutils.core import setup
 
 long_description = '''
 This package is an add on library on top of keras or tensorflow.
-The aim of this package is to provide security for encrypting images.
-The model is trained on the encrypted data
+The aim of this package is to provide privacy of images by enabling the model to be trained on encrypted images.
+
+Read the documentation at: https://github.com/akshaybahadur21/keras-secure-image
+
+For a detailed code overview on colab, see:
+https://colab.research.google.com/drive/1D7ziODKrzL0QK-GuI7BH9f9Fk7U3tfUW
+
+keras-secure-image is compatible with Python 2.7-3.6
+and is distributed under the MIT license.
+
 '''
 
 setup(
@@ -16,11 +24,11 @@ setup(
   author_email = 'akshaybahadur21@gmail.com',      
   url = 'https://github.com/akshaybahadur21',   
   download_url = 'https://github.com/akshaybahadur21/keras-secure-image/archive/v0.3.tar.gz',
-  keywords = ['KERAS', 'SECURITY', 'DEEP LEARNING'],   
+  keywords = ['KERAS', 'SECURITY', 'PRIVACY', 'DEEP LEARNING'],   
   install_requires=[            
           'numpy',
           'Pillow',
-		  'scikit-image'
+	  'scikit-image'
       ],
   classifiers=[
     'Development Status :: 3 - Alpha',      	
