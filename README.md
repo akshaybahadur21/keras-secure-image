@@ -1,7 +1,12 @@
 # Keras Secure Image
+
+![Keras Secure Image logo](https://github.com/akshaybahadur21/keras-secure-image/blob/master/images/banner_new.png)
+
 [![](https://img.shields.io/github/license/sourcerer-io/hall-of-fame.svg?colorB=ff0000)](https://github.com/akshaybahadur21/Emojinator/blob/master/LICENSE.md)
 [![](https://img.shields.io/badge/Akshay-Bahadur-brightgreen.svg?colorB=ff0000)](https://akshaybahadur.com)
 [![](https://img.shields.io/pypi/v/keras-secure-image.svg)](https://pypi.org/project/keras-secure-image/)
+
+## Description
 
 This is an add-on library for Keras. The main functionality is to encrypt the images in the dataset so they are secure.
 You can write your own generator and call the decrypt functionality at runtime. The decrypted images are not stored, they are stored in tuple by the generator ensuring the safety of your images.
