@@ -16,10 +16,10 @@ and is distributed under the MIT license.
 
 setup(
   name = 'keras-secure-image',         
-  version = '0.3.1',      
+  version = '0.3.2',      
   license='MIT',       
   long_description = long_description,
-  description='Add on library for deep learning on encrypted images'
+  description='Add on library for deep learning on encrypted images',
   author = 'Akshay Bahadur',                   
   author_email = 'akshaybahadur21@gmail.com',      
   url = 'https://github.com/akshaybahadur21',   
