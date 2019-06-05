@@ -10,7 +10,8 @@ setup(
   name = 'keras-secure-image',         
   version = '0.3.1',      
   license='MIT',       
-  long_description = long_description,   
+  long_description = long_description,
+  description='Add on library for deep learning on encrypted images'
   author = 'Akshay Bahadur',                   
   author_email = 'akshaybahadur21@gmail.com',      
   url = 'https://github.com/akshaybahadur21',   
